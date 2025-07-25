@@ -1,0 +1,11 @@
+name: ci-gh-action
+on: 
+    push:
+        branches:
+            - main
+jobs:
+    hello-world:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Running a one-line script:
+                run: echo "Hello World!"
