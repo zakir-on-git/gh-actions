@@ -15,7 +15,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Running a oneline script
-              run: echo "Hello ${{ github.event.inputs.name }}!"
+              run: echo Hello ${{ inputs.name }}!
             - name: running another
               run: echo "Hello World War II"
             - name: Install dependencies
