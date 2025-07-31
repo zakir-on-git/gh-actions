@@ -11,3 +11,9 @@ jobs:
               run: echo "Hello World!"
             - name: running another
               run: echo "Hello World War II"
+            - name: Install dependencies
+              run: |
+                sudo apt-get update
+                sudo apt-get install -y curl jq
+                echo "curl: $(curl --version)"
+                echo "jq: $(jq --version)"
