@@ -17,3 +17,11 @@ jobs:
                 sudo apt-get install -y curl jq
                 echo "curl: $(curl --version)"
                 echo "jq: $(jq --version)"
+    checkout:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+            
+            - name: Display List of files
+              run: ls -la
