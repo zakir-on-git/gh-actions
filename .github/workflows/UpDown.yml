@@ -21,6 +21,8 @@ jobs:
                   path: hello.txt
             - name: Create file
               run: echo "Hello World" > hello.txt
+            - name: File List
+              run: ls -a
 
     download:
         needs: upload
