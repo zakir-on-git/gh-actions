@@ -19,7 +19,8 @@ jobs:
               with:
                   name: hello
                   path: hello.txt
-            run: echo "Hello World" > hello.txt
+            - name: Create file
+              run: echo "Hello World" > hello.txt
 
     download:
         needs: upload
@@ -29,5 +30,5 @@ jobs:
               uses: actions/download-artifact@v4
               with:
                   name: hello
-
-            run: cat hello.txt
+            - name: Display
+              run: cat hello.txt
